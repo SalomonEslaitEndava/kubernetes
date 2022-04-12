@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadada: 
-  name: deploy-frontend
+  name: frontend
   labels:
     app: front-end
 spec:
