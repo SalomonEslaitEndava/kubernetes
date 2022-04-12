@@ -1,18 +1,19 @@
----
+--- 
 apiVersion: apps/v1
 kind: Deployment
 metadada: 
   name: deploy-frontend
-spec:
+spec: 
+  replicas: 2
+  selector: 
+    matchLabels: 
+      tag: front-end
   template: 
-    metadata:
-      labels:
+    metadata: 
+      labels: 
         tag: front-end
     spec: 
-      containers:
-      - name: front-end-name
-        image: salomoneslaitendava/devopsrampup:frontendV2
-  replicas: 2
-  selector:
-    matchLabels:
-      tag: front-end
+      containers: 
+        - 
+          image: "salomoneslaitendava/devopsrampup:frontendV2"
+          name: front-end-name
