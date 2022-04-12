@@ -17,6 +17,6 @@ spec:
       - image: salomoneslaitendava/devopsrampup:frontendV2
         name: front-end
         ports:
-        -containerPort: 3030
+        - containerPort: 3030
   replicas: 2
   
