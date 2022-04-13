@@ -14,7 +14,7 @@ spec:
         app: backend
     spec: 
       containers:
-      - image: salomoneslaitendava/devopsrampup-back:1
+      - image: salomoneslaitendava/devopsrampup-back:2
         name: backend
         ports:
         - containerPort: 3000
