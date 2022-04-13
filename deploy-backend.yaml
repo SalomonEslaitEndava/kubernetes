@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: deploy-backend
+  labels:
+    app: backend
+spec:
+  selector:
+      matchLabels:
+        app: backend
+  template: 
+    metadata:
+      labels:
+        app: backend
+    spec: 
+      containers:
+      - image: salomoneslaitendava/devopsrampup-back:1
+        name: backend
+        ports:
+        - containerPort: 3000
+  replicas: 2
+  
