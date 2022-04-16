@@ -14,7 +14,7 @@ spec:
         app: front-end
     spec: 
       containers:
-      - image: salomoneslaitendava/devopsrampup-front:1
+      - image: salomoneslaitendava/devopsrampup-front:2
         name: front-end
         ports:
         - containerPort: 3030
