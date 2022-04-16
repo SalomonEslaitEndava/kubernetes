@@ -18,5 +18,14 @@ spec:
         name: backend
         ports:
         - containerPort: 3000
+        env:
+        - name: DB_HOST
+          value: "10.149.128.2"
+        - name: DB_USER
+          value: "root"
+        - name: DB_PASS
+          value: "admin"
+        - name: DB_NAME
+          value: "movie_db"
   replicas: 2
   
