@@ -11,10 +11,10 @@ spec:
   template: 
     metadata:
       labels:
-        app: front-end
+        app: front-end #con este se conecta
     spec: 
       containers:
-      - image: salomoneslaitendava/devopsrampup-front:2
+      - image: salomoneslaitendava/devopsrampup-front:4
         name: front-end
         ports:
         - containerPort: 3030
