@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
+metadata:
   name: deploy-frontend
   labels:
     app: front-end
@@ -8,15 +8,18 @@ spec:
   selector:
       matchLabels:
         app: front-end
-  template: 
+  template:
     metadata:
       labels:
         app: front-end #con este se conecta
-    spec: 
+    spec:
       containers:
       - image: salomoneslaitendava/devopsrampup-front:4
         name: front-end
         ports:
         - containerPort: 3030
+        env:
+        - name: BACKEND_URL
+          value: "10.101.252.105:3000" # "backend-service:3000"
   replicas: 2
   
