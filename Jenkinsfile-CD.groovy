@@ -1,4 +1,4 @@
-def miVariable = Jenkins.instance.getItem('rampup-CI').lastSuccessfulBuild.number
+def ciLastBuild = Jenkins.instance.getItem('rampup-CI').lastSuccessfulBuild.number
 pipeline {
     environment {
         registry = "salomoneslaitendava/devopsrampup-front"
@@ -11,8 +11,8 @@ pipeline {
             steps {
                 sshagent(credentials: ['ssh-key-jenkins']){
                     sh '''
-                    ssh -o StrictHostKeyChecking=no -l salomon_antonio_eslait 10.0.1.30 'touch sobeloenlaotramaquina.txt'
-                    
+                    ssh -o StrictHostKeyChecking=no -l salomon_antonio_eslait 10.0.1.30 'git clone https://github.com/SalomonEslaitEndava/kubernetes.git'
+                    ssh -o StrictHostKeyChecking=no -l salomon_antonio_eslait 10.0.1.30 'pwd'
                     '''
                     sh "echo mi variable es ${miVariable}"
                     // sh 'ssh salomon_antonio_eslait@10.0.1.26 git clone https://github.com/SalomonEslaitEndava/kubernetes.git'
