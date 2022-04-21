@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sshagent(credentials: ['ssh-key']){
                     sh '''
-                    ssh -o StrictHostKeyChecking=no -l salomon_antonio_eslait 10.0.1.22 'touch sobeloenlaotramaquina.txt'
+                    ssh -o StrictHostKeyChecking=no -l salomon_antonio_eslait 10.0.1.30 'touch sobeloenlaotramaquina.txt'
                     
                     '''
                     // sh 'ssh salomon_antonio_eslait@10.0.1.26 git clone https://github.com/SalomonEslaitEndava/kubernetes.git'
