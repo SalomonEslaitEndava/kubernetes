@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('deploy'){
             steps {
-                sshagent(['10.0.1.30']){
+                sshagent(credentials: ['ssh-credentials-id']){
                     sh '''
                     ssh -o StrictHostKeyChecking=no -l salomon_antonio_eslait 10.0.1.30 'touch sobeloenlaotramaquina.txt'
                     
