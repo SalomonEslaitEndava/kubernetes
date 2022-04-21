@@ -14,12 +14,11 @@ spec:
         app: front-end #con este se conecta
     spec:
       containers:
-      - image: salomoneslaitendava/devopsrampup-front:4
+      - image: salomoneslaitendava/devopsrampup-front:latest
         name: front-end
         ports:
         - containerPort: 3030
         env:
         - name: BACKEND_URL
-          value: "10.101.252.105:3000" # "backend-service:3000"
+          value: "backend-service:3000"
   replicas: 2
-  
