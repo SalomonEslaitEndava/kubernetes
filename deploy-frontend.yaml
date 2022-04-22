@@ -20,5 +20,5 @@ spec:
         - containerPort: 3030
         env:
         - name: BACKEND_URL
-          value: "backend-service:3000"
+          value: "10.100.136.109:3000" #"backend-service:3000"
   replicas: 2
